@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Weather Dashboard</title>
+</head>
+<body>
+        <header class="hero">
+            <h1 class="app-title"> Weather Dashboard</h1>
+        </header>
+        <div class= "row no-gutters">
+            <div class="col-12 col-lg-3  bg-light search-container">
+                <form class="col-12 no-gutters d-flex">  
+                    <div class="mb-5 col-10">
+                        <label for="city-search" class="form-label">Search for a City:</label>
+                        <div class="d-flex">
+                            <input type="text" placeholder="City, State" id="city-search" class="form-control"> 
+                            <button type="submit" id="search-btn" class="btn btn-primary">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div class="card m-2" >
+                    <div class="card-header">
+                      Recent Searches
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">An item</li>
+                      <li class="list-group-item">A second item</li>
+                      <li class="list-group-item">A third item</li>
+                    </ul>
+                  </div>
+            </div>
+            <main class="col-12 col-lg-9">
+                <div class="current-weather">
+                    <h2 id="current-city-name">City Name (Date)</h2>
+                    <p>Temperature:</p>
+                    <p>Humidity:</p>
+                    <p>Wind Speed:</p>
+                    <p>UV Index:</p>
+                </div>
+                <div>
+                    <h3 class="five-day-title">
+                        5-Day Forecast:
+                    </h3>
+                    <div class="card-container d-flex justify-content-around">
+                        <div class="card text-white bg-primary mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title" id="title-day-1">Date</h5>
+                                <p class="card-text" id="temp-day-1">Temp</p>
+                                <p class="card-text" id="humidity-day-1">Humidity</p>
+                            </div>
+                        </div>
+                        <div class="card text-white bg-primary mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title" id="title-day-2">Date</h5>
+                                <p class="card-text" id="temp-day-2">Temp</p>
+                                <p class="card-text" id="humidity-day-2">Humidity</p>
+                            </div>
+                            </div>
+
+                        <div class="card text-white bg-primary mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title" id="title-day-3">Date</h5>
+                                <p class="card-text" id="temp-day-3">Temp</p>
+                                <p class="card-text" id="humidity-day-3">Humidity</p>
+                            </div>
+                            </div>
+                        <div class="card text-white bg-primary mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title" id="title-day-4">Date</h5>
+                                <p class="card-text" id="temp-day-4">Temp</p>
+                                <p class="card-text" id="humidity-day-4">Humidity</p>
+                            </div>
+                            </div>
+                        <div class="card text-white bg-primary mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title" id="title-day-5">Date</h5>
+                                <p class="card-text" id="temp-day-5">Temp</p>
+                                <p class="card-text" id="humidity-day-5">Humidity</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

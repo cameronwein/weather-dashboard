@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    height: 100vh;
+}
+body {
+    font-family: 'Oswald', sans-serif;
+    height: 100vh;
+}
+.hero {
+    background-color: darkslategrey;
+}
+
+.app-title {
+    text-align: center;
+    color: white;
+    font-weight: 600;
+}
+.search-container {
+    height: 100vh;
+}
+
+.card-header {
+    background: rgb(175, 175, 175);
+    color: white;
+    font-size: 24px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.form-label{
+    font-size: 24px;
+}
+.current-weather {
+    width: 100%;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+#current-city-name {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.five-day-title {
+    margin: 20px 10px;
+}
