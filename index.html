@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/style.css" />
@@ -16,11 +16,11 @@
         </header>
         <div class= "row no-gutters">
             <div class="col-12 col-lg-3  bg-light search-container">
-                <form class="col-12 no-gutters d-flex">  
+                <form id="search-form" class="col-12 no-gutters d-flex">  
                     <div class="mb-5 col-10">
                         <label for="city-search" class="form-label">Search for a City:</label>
                         <div class="d-flex">
-                            <input type="text" placeholder="City, State" id="city-search" class="form-control"> 
+                            <input type="text" placeholder="Enter City Name" id="city-search-form" class="form-control"> 
                             <button type="submit" id="search-btn" class="btn btn-primary">
                                 <i class="fas fa-search"></i>
                             </button>
@@ -32,19 +32,21 @@
                       Recent Searches
                     </div>
                     <ul class="list-group list-group-flush">
-                      <li class="list-group-item">An item</li>
-                      <li class="list-group-item">A second item</li>
-                      <li class="list-group-item">A third item</li>
                     </ul>
                   </div>
             </div>
             <main class="col-12 col-lg-9">
                 <div class="current-weather">
-                    <h2 id="current-city-name">City Name (Date)</h2>
-                    <p>Temperature:</p>
-                    <p>Humidity:</p>
-                    <p>Wind Speed:</p>
-                    <p>UV Index:</p>
+                    <div class="current-heading-container">
+                        <h2 id="current-city-name">City Name (Date)</h2>
+                        <div class="icon-container">
+                            <img id="weather-icon" class="weather-icon-hidden" src="" alt="weather icon">
+                        </div>
+                    </div>
+                    <p>Temperature: <span id="current-temp">--</span>&#176;F</p>
+                    <p>Humidity: <span id="current-humidity">--</span>%</p>
+                    <p>Wind Speed: <span id="current-wind">--</span> MPH</p>
+                    <p>UV Index: <span id="current-uv">--</span></p>
                 </div>
                 <div>
                     <h3 class="five-day-title">
@@ -54,37 +56,51 @@
                         <div class="card text-white bg-primary mb-3">
                             <div class="card-body">
                                 <h5 class="card-title" id="title-day-1">Date</h5>
-                                <p class="card-text" id="temp-day-1">Temp</p>
-                                <p class="card-text" id="humidity-day-1">Humidity</p>
+                                <div class="icon-container">
+                                    <img id="weather-icon-1" class="weather-icon-hidden" src="" alt="weather icon">
+                                </div>
+                                <p class="card-text">Temp: <span id="temp-day-1">--</span>&#176;F</p>
+                                <p class="card-text">Humidity: <span id="humidity-day-1">--</span>%</p>
                             </div>
                         </div>
                         <div class="card text-white bg-primary mb-3">
                             <div class="card-body">
                                 <h5 class="card-title" id="title-day-2">Date</h5>
-                                <p class="card-text" id="temp-day-2">Temp</p>
-                                <p class="card-text" id="humidity-day-2">Humidity</p>
+                                <div class="icon-container">
+                                    <img id="weather-icon-2" class="weather-icon-hidden" src="" alt="weather icon">
+                                </div>
+                                <p class="card-text">Temp: <span id="temp-day-2">--</span>&#176;F</p>
+                                <p class="card-text">Humidity: <span id="humidity-day-2">--</span>%</p>
                             </div>
-                            </div>
-
+                        </div>
                         <div class="card text-white bg-primary mb-3">
                             <div class="card-body">
                                 <h5 class="card-title" id="title-day-3">Date</h5>
-                                <p class="card-text" id="temp-day-3">Temp</p>
-                                <p class="card-text" id="humidity-day-3">Humidity</p>
+                                <div class="icon-container">
+                                    <img id="weather-icon-3" class="weather-icon-hidden" src="" alt="weather icon">
+                                </div>
+                                <p class="card-text">Temp: <span id="temp-day-3">--</span>&#176;F</p>
+                                <p class="card-text">Humidity: <span id="humidity-day-3">--</span>%</p>
                             </div>
                             </div>
                         <div class="card text-white bg-primary mb-3">
                             <div class="card-body">
                                 <h5 class="card-title" id="title-day-4">Date</h5>
-                                <p class="card-text" id="temp-day-4">Temp</p>
-                                <p class="card-text" id="humidity-day-4">Humidity</p>
+                                <div class="icon-container">
+                                    <img id="weather-icon-4" class="weather-icon-hidden" src="" alt="weather icon">
+                                </div> 
+                                <p class="card-text">Temp: <span id="temp-day-4">--</span>&#176;F</p>
+                                <p class="card-text">Humidity: <span id="humidity-day-4">--</span>%</p>
                             </div>
                             </div>
                         <div class="card text-white bg-primary mb-3">
                             <div class="card-body">
                                 <h5 class="card-title" id="title-day-5">Date</h5>
-                                <p class="card-text" id="temp-day-5">Temp</p>
-                                <p class="card-text" id="humidity-day-5">Humidity</p>
+                                <div class="icon-container">
+                                    <img id="weather-icon-5" class="weather-icon-hidden" src="" alt="weather icon">
+                                </div>
+                                <p class="card-text">Temp: <span id="temp-day-5">--</span>&#176;F</p>
+                                <p class="card-text">Humidity: <span id="humidity-day-5">--</span>%</p>
                             </div>
                         </div>
                     </div>
@@ -95,10 +111,11 @@
 
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" ></script>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
