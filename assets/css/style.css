@@ -16,11 +16,17 @@ body {
     text-align: center;
     color: white;
     font-weight: 600;
+    margin-bottom: 0px;
 }
 .search-container {
     height: 100vh;
 }
-
+.list-group-item:hover {
+    background-color: rgb(240, 240, 240);
+}
+.list-group-item:active {
+    background-color: rgb(175, 175, 175);
+}
 .card-header {
     background: rgb(175, 175, 175);
     color: white;
@@ -54,8 +60,23 @@ body {
 .weather-icon {
     width: 100%;
 }
+.card-container {
+    flex-wrap: wrap;
+}
+.card {
+    margin: 0px 10px;
+}
 .current-heading-container {
     display: inline-flex;
     align-items: center;
     margin-bottom: 20px;
+}
+
+@media screen and (max-width: 992px) {
+    .search-container {
+      height: 100%;
+    }
+    .recent-searches{
+        display: none;
+    }
 }

@@ -159,7 +159,7 @@ var formSubmitHandler = function(event){
         requestLocationData(city,fromClick);
     }
     else {
-        alert("Please enter a city name only");
+        alert("Please enter a city name");
     }
 };
 
